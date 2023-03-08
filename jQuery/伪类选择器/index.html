@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("li:first").css("color","#a7c5eb");
+            $("li:last").css("color","#ffc478");
+            $("li:odd").css("color","#c1a1d3");
+            $("li:even").css("font-sizi","25px");
+            $("li:eq(4)").css("text-shadow","2px 2px 2px #96bb7c");
+        })
+    </script>
+</head>
+<body>
+    水果清单：
+    <ul>
+      <li>苹果</li>
+      <li>梨子</li>
+      <li>葡萄</li>
+      <li>西瓜</li>
+      <li>樱桃</li>
+      <li>草莓</li>
+      <li>桑葚</li>
+    </ul>
+</body>
+</html>
