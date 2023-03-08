@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(this === window);
+        ("use strict");
+        console.log(this === window);
+        this.userName = "zhangsan";
+        window.age=18;
+        console.log(this.age);
+        console.log(window.userName);
+        function fn() {
+            console.log(this);
+        }
+        fn();
+        function fn(){
+            let a = 1;
+            console.log(this.a);
+        }
+        var a = 2;
+        fn();
+        function fn(){
+            console.log(this);
+        }
+        fn();
+        const obj ={
+            a:1,
+            fn(){
+                return function(){
+                    console.log("this:>>",this);
+                    console.log("this.a:>>",this.a);
+                };
+            },
+        };
+        var a = 100;
+        obj.fn()();
+        const temp = obj.fn();
+        temp();
+        const obj={
+            a:1,
+            fn(){
+                const _this = this;
+                return function(){
+                    console.log("this:>>",_this);
+                    console.log("this.a:>>",_this.a);
+                };
+            },
+        };
+        obj.fn()();
+        const obj ={
+            a:1,
+            fn(){
+                return()=>{
+                    console.log("this:>>",this);
+                    console.log("this.a:>>",this.a);
+                };
+            },
+        };
+        obj.fn();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        window.onclick = function(){
+            var phone = document.getElementById("phone");
+            phone.onkeydown = function(){
+                phone.style.color = "#00adb5";
+            };
+            phone.onkeyup = function(){
+                phone.style.color="#000"
+            }
+        }
+    </script>
+    <input type="text" name="" id="phone" value="输入内容">
+</body>
+</html>

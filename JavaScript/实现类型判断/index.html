@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.js">
+</head>
+
+<body>
+    <script>
+        // 可以判断除了 null 之外的基础类型。
+        console.log(typeof true); // 'boolean'
+        console.log(typeof 100); // 'number'
+        console.log(typeof "abc"); // 'string'
+        console.log(typeof 100n); // 'bigint'
+        console.log(typeof undefined); // 'undefined'
+        console.log(typeof Symbol("a")); // 'symbol'
+
+        // 无法判断 null。
+        console.log(typeof null); // 输出 'object'，原因在文章末尾解释。
+
+        // 无法判断除了 function 之外的引用类型。
+        console.log(typeof []); // 'object'
+        console.log(typeof {}); // 'object'
+    </script>
+</body>
+
+</html>

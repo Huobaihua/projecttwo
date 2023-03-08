@@ -1,0 +1,105 @@
+/*
+ TODO：请补充代码
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+}
+.header{
+    padding-top: 13px;
+    background-color: #a6b1e1;
+}
+.header .nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header .nav h1 {
+   font-size: 18px;
+   color: white;
+}
+.header .nav ul{
+    display: flex;
+}
+.header .nav ul li {
+    margin-right: 16px;
+    font-size: 16px;
+    color: white;
+}
+.header .container{
+    height: 427px;
+    text-align: center;
+}
+.header .container .title{
+    margin-top: 30px;
+    font-size: 45px;
+    color: black;
+}
+.header .container .text{
+    margin-top: 62px;
+    color: white;
+    font-size: 21px;
+    font-weight: 200;
+}
+.header .container .join{
+    width: 120px;
+    height: 50px;
+    margin-top: 36px;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #efbfbf;
+    line-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0 0 0 2px #efbfbf;
+}
+.main{
+ padding-top: 74px;
+}
+.main .wrap{
+    height: 302px;
+    width: 1024px;
+    display: flex;
+}
+.main .wrap ul{
+    height: 302px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .wrap ul li{
+    height: 144px;
+    width: 50%;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+.main .wrap ul li .info-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 200;
+    color: black;
+}
+.main .wrap ul li .info-content{
+    font-size: 18px;
+    line-height: 1.4em;
+    color: #aaa;
+    padding-bottom: 20px;
+
+}
+.footer{
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+.footer-title{
+    margin-bottom: 10px;
+}

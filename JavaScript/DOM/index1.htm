@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">蓝桥云课</p>
+    <button onclick="changeColor()">改变颜色</button>
+    <button onclick="createElem()">创建元素</button>
+    <div class="item"></div>
+    <button onclick="addText()">添加元素</button>
+
+    <script>
+        function changeColor(){
+            document.getElementById("demo").style.color="blue";
+        }
+        function createElem(){
+            var btn = document.createElement("BUTTON");
+            var t = document.createTextNode("确认");
+            btn.appendChild(t);
+            document.body.appendChild(btn);
+        }
+        function addText(){
+            var e = document.getElementsByClassName("item");
+            e[0].innerHTML="蓝桥云课是国内领先的IT 在线编辑及在实训学习的平台。";
+
+        }
+    </script>
+</body>
+</html>

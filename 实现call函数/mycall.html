@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myCall(fn,context = window){
+            context.fn = fn;
+            const arges=[...arguments].slice(2);
+            delete context.fn;
+            return res;
+        }
+        // 引用类型
+console.log(Object.prototype.toString.call({})); // '[object Object]'
+console.log(Object.prototype.toString.call(function () {})); // "[object Function]'
+console.log(Object.prototype.toString.call(/123/g)); // '[object RegExp]'
+console.log(Object.prototype.toString.call(new Date())); // '[object Date]'
+console.log(Object.prototype.toString.call(new Error())); // '[object Error]'
+console.log(Object.prototype.toString.call([])); // '[object Array]'
+console.log(Object.prototype.toString.call(new Map())); // '[object Map]'
+console.log(Object.prototype.toString.call(new Set())); // '[object Set]'
+console.log(Object.prototype.toString.call(new WeakMap())); // '[object WeakMap]'
+console.log(Object.prototype.toString.call(new WeakSet())); // '[object WeakSet]'
+
+// 原始类型
+console.log(Object.prototype.toString.call(1)); // '[object Number]'
+console.log(Object.prototype.toString.call("abc")); // '[object String]'
+console.log(Object.prototype.toString.call(true)); // '[object Boolean]'
+console.log(Object.prototype.toString.call(1n)); // '[object BigInt]'
+console.log(Object.prototype.toString.call(null)); // '[object Null]'
+console.log(Object.prototype.toString.call(undefined)); // '[object Undefined]'
+console.log(Object.prototype.toString.call(Symbol("a"))); // '[object Symbol]'
+    </script>
+</body>
+</html>

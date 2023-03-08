@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var value = document.getElementById("btn");
+            value.onclick = function(e){
+                console.log("这是一个" + e.type +"事件");
+            }
+        }
+        </script>
+        <input type="button" name="" value="点击" id="btn">
+</body>
+</html>
