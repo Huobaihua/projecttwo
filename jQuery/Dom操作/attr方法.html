@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("input").click(function(){
+                alert("图片的宽度为："+$("img").attr("width"));
+                $("img").attr("src","https://labfile.oss.aliyuncs.com/courses/3774/bird1.jpg");
+                $("img").attr({src:"https://labfile.oss.aliyuncs.com/courses/3774/bird2.jpg",width:"400px",height:"300px"});
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/bird1.jpg" width="200px" height="150px"><br>
+    <input type="button" value="切换">
+</body>
+</html>

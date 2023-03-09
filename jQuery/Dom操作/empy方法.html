@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 290px;
+            height: 150px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #cee6b4;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("div").click(function(){
+                $(this).empty();
+            })
+            $("input").click(function(){
+                $("div").remove()
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h3>四时田园杂兴</h3>
+        <p>谷雨如丝复似尘，煮瓶浮蜡正尝新。</p>
+        <p>牡丹破萼樱桃熟，未许飞花减却春。</p>
+    </div>
+    <input type="button" name="" id="" value="删除">
+</body>
+</html>
