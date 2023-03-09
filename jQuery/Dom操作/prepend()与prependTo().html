@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#div1").one("click",function(){
+                var $span = $("<span>欢迎来到</span>");
+                $("#div1").prepend($span);
+            });
+            $("#div2").one("click",function(){
+                var $span = $("<span>欢迎来到</span>");
+                $($span).prependTo("#div2");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">蓝桥云课</div>
+    <div id="div2">jQuery 学习</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid #000;
+            margin: 10px;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var i = 0;
+            var j = 0;
+            $("#div1").click(function(){
+                i++;
+                var $div = $(`<div>jQuery${i}</div>`);
+                $("#div1").before($div);
+            });
+            $("#div2").click(function(){
+                j++;
+                var $div = $(`<div> I like${j}</div>`);
+                $($div).insertBefore("#div2");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">before</div>
+    <div id="div2">insertBefore</div>
+</body>
+</html>

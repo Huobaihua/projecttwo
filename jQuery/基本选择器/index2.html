@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../jquery-3.6.0.min.js"></script>
+    <style>
+        .li1{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -17,10 +23,14 @@
                 border:"2px solid yellow",
 
             });
+            $(".li1").css({
+                background:"yellow"
+            })
         });
     </script>
     <div class="test">
         <span>蓝桥云课是国内领先的 IT 在线编辑及在线实训学习平台</span>
     </div>
+    <div class="li1"></div>
 </body>
 </html>

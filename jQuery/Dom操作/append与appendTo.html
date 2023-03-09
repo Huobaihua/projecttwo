@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: cornflowerblue;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#div1").one("click",function(){
+                var $span = $("<span>蓝桥云课</span>");
+                $("#div1").append($span);
+            });
+            $("#div2").one("click",function(){
+                var $span = $("<span>jQuery</span>");
+                $($span).appendTo("#div2");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div  id="div1">欢迎来到</div>
+    <div id="div2">欢迎学习</div>
+</body>
+</html>

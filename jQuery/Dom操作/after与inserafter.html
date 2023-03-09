@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid #000;
+            margin: 10px;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var j = 0;
+            var i = 0;
+            $('#div1').click(function(){
+                i++;
+                var $div = $(`<div>我喜欢 jQuery${i}</div>`);
+                $("#div1").after("$div")
+            });
+            $("#div2").click(function(){
+                j++;
+                var $div = $(`<div> I like Jquery${j}</div>`);
+                $($div).insertAfter("#div2");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">after</div>
+    <div id="div2">insertAfter</div>
+</body>
+</html>
