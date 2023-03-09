@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('input[type="radio"]').chang(function(){
+                $("#item").text("你的爱好是："+$(this).val());
+                $("#item").css("color","blue");
+            })
+        })
+    </script>
+</head>
+<body>
+    <label"><input type="radio" name="hobby" value="画画">画画</label>
+    <label"><input type="radio" name="hobby" value="游泳">游泳</label>
+    <label"><input type="radio" name="hobby" value="游泳">旅行</label>
+    <label"><input type="radio" name="hobby" value="摄影">摄影</label>
+    <label"><input type="radio" name="hobby" value="编程">编程</label>
+    <label"><input type="radio" name="hobby" value="其他">其他</label>
+    <div id="item"></div>
+</body>
+</html>

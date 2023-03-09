@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.05);
+        }
+        #search{
+            color: gray;
+        }
+    </style>
     <script src="../jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
             $("#search").focus(function(){
-                if($(this).var().trim()==""){
-                    $(this).var() === "搜索一下，喜欢的课程"{
+                   if($(this).var() === "搜索一下，喜欢的课程"){
                         $(this).var("");
                     }
+            })
+            $("#search").blur(function(){
+                if($(this).var().trim()==""){
+                    $(this).var("搜索游戏啊，喜欢的课程")
                 }
             })
         })
     </script>
 </head>
 <body>
-    
+    <img src="" alt="https://labfile.oss.aliyuncs.com/courses/3774/lanqiao.png">
+    <br>
+    <input type="text" name="" id="search" value="搜素一下，喜欢的课程">
+    <input type="button" name="" id="" value="搜索"><br>
+    <img src="https://labfile.oss.aliyuncs.com/courses/3774/courses.png/">
 </body>
 </html>
