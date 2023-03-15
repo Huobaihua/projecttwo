@@ -8,9 +8,34 @@
     <script src="../vue.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <p>小写转换大写：过滤前：{{msg}} 过滤后：{{msg|toUpperCase}}</p>
+        <p>去除数字：过滤前：{{msg2}} 过滤后：{{msg2|getString}}</p>
+    </div>
     <script>
-
+        var app = new Vue({
+            el:"#app",
+            data:{
+                msg:"hello",
+                msg2:"ls2y3l",
+            },
+            filters:{
+                toUpperCase:function(val){
+                    return val.toUpperCase();
+                },
+                getString:function(val){
+                    let newVal = "";
+                    val.split("").map(function(item){
+                        if(9>=item && item >=0){
+                            return;
+                        }else{
+                            return(newVal += item);
+                        }
+                    });
+                    return newVal;
+                },
+            },
+        });
     </script>
 </body>
 </html>
