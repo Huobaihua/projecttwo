@@ -3,77 +3,87 @@ let maxPage; // 最大页数
 
 // TODO：待补充代码
 
-//显示当前页码
-function showPagination(maxPage.pageNum){
-  document.querySelector('#pagination').innerHTML=`
-  共${maxPage}页，当前${pageNum}页
+// 显示当前页码
+function showPagination(maxPage,pageNum){
+  document.querySelector('#pagination').innerHTML =`
+  共${maxPage}页,当前${pageNum}页
   `
 }
 
 //得到每页数据
-function getpageData(data){
+function getPageData(data){
   return data.slice((pageNum - 1)*5,pageNum*5)
 }
-//渲染每页数据
+//渲染每一页
 function renderHtml(pageData){
   document.querySelector('#list').innerHTML = pageData.map(item=>`
   <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">${item.name}</h5>
-            <small>${(item.price / 100).toFixed(2)}</small>
-          </div>
-          <p class="mb-1">
-           ${item.description}
-          </p>
-        </a>
-      </div>
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">${item.name}</h5>
+      <small>${(item.price / 100).toFixed(2)}</small>
+    </div>
+    <p class="mb-1">
+      ${item.description}
+    </p>
+  </a>
+  </div>
   `).join('')
 }
-axios.get('./is/carlist.join').then(res=>{
+
+let data //总数据
+let pageData //每页数据
+
+axios.get('./js/carlist.json')
+.then(res=>{
   data = res.data
-  console.log(res.data);
-  maxpage = Math.ceil(data.length / 5)
-  showPagination(maxPage.pageNum)
+  console.log(data);
+  maxPage = Math.ceil(data.length / 5)
+  // 显示当前页码
+  showPagination(maxPage,pageNum)
   //得到每页数据
   pageData = getPageData(data)
-  console.log(pageData);
-  //渲染每页数据
+  console.log(getPageData);
+  //渲染每一页
   renderHtml(pageData)
 })
+
 
 // 点击上一页
 let prev = document.getElementById("prev");
 prev.onclick = function () {
   // TODO：待补充代码
-  next.classList.remove('disabled')
+  prev.classList.remove('disabled')
   pageNum--
   console.log(pageNum);
-  if(pageNum<=1){
+  if(pageNum<= 1){
     this.classList.add('disabled')
-    pageNum=maxPage
+    pageNum = 1
   }
-  showPagination(maxPage.pageNum)
-  //得到每页数据
-  pageData = getPageData(data)
-  console.log(pageData);
-  //渲染每页数据
-  renderHtml(pageData)
+    // 显示当前页码
+    showPagination(maxPage,pageNum)
+    //得到每页数据
+    pageData = getPageData(data)
+    console.log(getPageData);
+    //渲染每一页
+    renderHtml(pageData)
 };
 // 点击下一页
 let next = document.getElementById("next");
 next.onclick = function () {
   // TODO：待补充代码
-  pageNew++
+  prev.classList.remove('disabled')
+  pageNum++
   console.log(pageNum);
-  if(pageNum>=maxpage){
+  if(pageNum>= maxPage){
     this.classList.add('disabled')
-    pageNum=maxPage
+    pageNum = maxPage
   }
-  showPagination(maxPage.pageNum)
-  //得到每页数据
-  pageData = getPageData(data)
-  console.log(pageData);
-  //渲染每页数据
-  renderHtml(pageData)
+    // 显示当前页码
+    showPagination(maxPage,pageNum)
+    //得到每页数据
+    pageData = getPageData(data)
+    console.log(getPageData);
+    //渲染每一页
+    renderHtml(pageData)
 };
