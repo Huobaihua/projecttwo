@@ -22,13 +22,13 @@ function rolling() {
   rollTime = setTimeout(() => {
     window.requestAnimationFrame(rolling); // 进行递归动画
   }, speed);
-  $('.li').addClass('active').siblings().removeClass('active')
+  $('.li' + num).addClass('active').siblings().removeClass('active')
   // time > times 转动停止
   if (time > times) {
     clearInterval(rollTime);
+    $('#award').text(`恭喜你抽中了${$('.li' + num).text()}`)
     time = 0;
     num=0;
-    $('#award')
     return;
   }
 }
