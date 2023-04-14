@@ -26,7 +26,7 @@ let list = () =>{
         <td>${data[i].name}</td>
         <td>${data[i].age}</td>
         <td>
-            <button onclick="delete(${data[i].id})">删除</button>
+            <button>删除</button>
             <a href="/detail?id=${data[i].id}"> <button>查看</button> </a>
         </td>
     </tr>`
@@ -48,7 +48,4 @@ let detail = (id)=>{
     return str
 }
 
-let delete=(id)=>{
-    data = data.filter(item.id!=id);
-}
-module.exports={login,list,detail,delete}
+module.exports={login,list,detail}
