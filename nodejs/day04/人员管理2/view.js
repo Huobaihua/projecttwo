@@ -39,8 +39,7 @@ let list = (data) =>{
 }
 
 let detail=(user)=>{
-    // console.log(""+id);
-
+    // console.log("美工收到的"+id);
   
   let HTML=`
   <head>

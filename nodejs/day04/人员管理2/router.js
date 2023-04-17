@@ -21,6 +21,7 @@ let router=(req,res)=>{
 
     if(req.path=='/detail'){// 详情页
         // http://localhost:8080/detail?id=3
+      
         let id = s.get('id');
         // console.log("要查看的id是"+id);
        let HTML= logic.detail(id);

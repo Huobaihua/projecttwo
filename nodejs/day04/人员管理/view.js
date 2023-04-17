@@ -17,7 +17,7 @@ let list = () =>{
         <th>id</th>
         <th>名字</th>
         <th>年龄</th>
-        <th>操作</th>
+        <th>操作<a href="/add"><button>添加</button></a></th>
     </tr>
     `
     for(var i=0;i<data.length;i++){
@@ -26,8 +26,8 @@ let list = () =>{
         <td>${data[i].name}</td>
         <td>${data[i].age}</td>
         <td>
-            <button>删除</button>
-            <a href="/detail?id=${data[i].id}"> <button>查看</button> </a>
+            <a href="/delete?id=${data[i].id}"><button>删除</button></a>
+            <a href="/detail?id=${data[i].id}"><button>查看</button> </a>
         </td>
     </tr>`
     }
@@ -47,5 +47,7 @@ let detail = (id)=>{
     `
     return str
 }
+let addData = ()=>{
 
+}
 module.exports={login,list,detail}
