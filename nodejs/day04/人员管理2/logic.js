@@ -26,5 +26,14 @@ let del=(id)=>{
   return html;
 }
 
-
-module.exports={detail,showlist,del}
+let searchParams=(id)=>{
+  console.log("仓库管理员SerachOne收到的id是"+id);
+  let obj={};
+  for (let i = 0; i <data.length; i++) {
+    if(data[i].id==id){
+      obj=data[i]
+    }
+  }
+  return obj;
+}
+module.exports={detail,showlist,del,searchParams}

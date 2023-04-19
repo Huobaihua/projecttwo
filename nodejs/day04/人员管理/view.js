@@ -1,23 +1,26 @@
-let data = require("./data")
-let login = ()=>{
-    let str = `<p>登陆页面</p>
-    <form action="/list">
-    账号:<input type="text" id="user"> <br>
-    密码:<input type="password" id="upwd"><br>
-    <input type="submit">
-    </form>
-    `
-    return str
+// let data = require('./data');
+let login=()=>{
+    let srt='/'
+    return srt;
 }
-let list = () =>{
-    data = data.filter(item=>item.show==true);
+let list = (data) =>{ 
+    console.log("美工做列表显示的数据是：");
+    console.log(data);
     let HTML =`
+    <a href="/add">添加人员</a>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="https://img2.baidu.com/it/u=668058670,2919039418&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=451">
+</head>
     <table border="1">
     <tr>
         <th>id</th>
         <th>名字</th>
         <th>年龄</th>
-        <th>操作<a href="/add"><button>添加</button></a></th>
+        <th>操作</th>
     </tr>
     `
     for(var i=0;i<data.length;i++){
@@ -26,28 +29,62 @@ let list = () =>{
         <td>${data[i].name}</td>
         <td>${data[i].age}</td>
         <td>
-            <a href="/delete?id=${data[i].id}"><button>删除</button></a>
-            <a href="/detail?id=${data[i].id}"><button>查看</button> </a>
+           <a href="/del?id=${data[i].id}">  <button>删除</button> </a>
+            <a href="/detail?id=${data[i].id}"> <button>查看</button> </a>
+            <a href="/update?id=${data[i].id}"> <button>更新</button> </a>
         </td>
     </tr>`
     }
    HTML+= `</table>`;
     return HTML;
 }
-let detail = (id)=>{
-    let ID = data.filter(item=>item.id==id)
-    let str=`
-    <table >
-       <h1>${ID[0].id}的资料页</h1>
-       <p>姓名:${ID[0].name}</p>
-       <p>年龄:${ID[0].age}</p>
-       <p><img src="${ID[0].img}" alt=""></p>
-       <p>个人简介</p>
-    </table>
-    `
-    return str
-}
-let addData = ()=>{
+
+let detail=(user)=>{
+    // console.log("美工收到的"+id);
+  
+  let HTML=`
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="https://img2.baidu.com/it/u=668058670,2919039418&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=451">
+</head>
+  <h1>${user.name}的个人信息</h1>
+    <p>姓名: ${user.name}</p>
+    <p>年龄：${user.age}</p>
+    <img src="${user.img}" alt="">
+    <p>这是我的个人简介</p>
+  `
+return HTML;
 
 }
-module.exports={login,list,detail}
+
+let add=()=>{
+    let HTML=`
+    <h1>增加人员</h1>
+    <form action="/toadd" method="get">
+     id: <input type="text" name="id"> <br>
+     名字： <input type="text" name="name"> <br>
+     年龄： <input type="text" name="age"> <br>
+     <input type="submit" value="添加">
+    </form>
+    `
+
+    return HTML;
+}
+
+let update=(obj)=>{
+    let HTML=`
+    <h1>修改信息</h1>
+    <form action="/toupdate" method="get">
+     id: <input type="text" name="id" readonly value="${obj.id}"> <br>
+     名字： <input type="text" name="name" value="${obj.name}"> <br>
+     年龄： <input type="text" name="age" value="${obj.age}"> <br>
+     <input type="submit" value="更新">
+    </form>
+    `
+
+    return HTML;
+}
+module.exports={login,list,detail,add,update};

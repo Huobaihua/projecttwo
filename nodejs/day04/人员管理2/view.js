@@ -31,6 +31,7 @@ let list = (data) =>{
         <td>
            <a href="/del?id=${data[i].id}">  <button>删除</button> <a>
             <a href="/detail?id=${data[i].id}"> <button>查看</button> </a>
+            <a href="/undate?id=${data[i].id}"> <button>更新</button> </a>
         </td>
     </tr>`
     }
@@ -72,4 +73,19 @@ let add=()=>{
 
     return HTML;
 }
-module.exports={login,list,detail,add};
+let searchOne=(id)=>{
+    console.log();
+}
+let undate=(obj)=>{
+    let HTML=`
+    <h1>修改信息</h1>
+    <form action="/toupdata">
+        id: <input type="text" name="id" readonly value="${obj.id}"><br>
+        名字： <input type="text" name="name" id="" value="${obj.name}"><br>
+        年龄： <input type="text" name="age" id="" value="${obj.age}"><br>
+        <input type="submit" name="" id="" value="更新">
+    </form>
+    `
+    return HTML;
+}
+module.exports={login,list,detail,add,undate};

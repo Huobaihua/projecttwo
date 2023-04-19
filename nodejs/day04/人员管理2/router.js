@@ -53,6 +53,23 @@ let router=(req,res)=>{
        let html= view.list()
        return html;
     }
+    if(req.path == "/undate"){
+      let id = s.get('id');
 
+      let obj = logic.searchParams(id);
+      console.log("路由update收到的逻辑给找到的信息是");
+      console.log(obj);
+      let html = view.undate(obj)
+      return html;
+    }
+    if(req.path=='/toupdate'){
+      let id =s.get('id');
+      let name=s.get('name');
+      let age = s.get('age');
+      let obj = {id,name,age};
+      let arr = logic.update(obj);
+      let html = view.list(arr);
+      return html;
+    }
 }
 module.exports=router;
