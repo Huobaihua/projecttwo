@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="msg"></div>
+    <div id="quit"></div>
+    <h1 class="text-center text-primary">学生显示页面</h1>
+    <form action="/add" class="text-center">
+        <input type="submit" value="添加学生" id="submit">
+    </form>
+
+    <form action="/search" method="post" class="text-center">
+        <input type="text" placeholder="请输入学生姓名" id="search" name="tname">
+        <input type="submit" value="查询">
+    </form>
+
+    <div class="container">
+        <table class="table border table-bordered table-danger table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>sid</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>手机号</th>
+                    <th>班级</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%arr.forEach(item=> {%> <tr>
+                        <td>
+                            <%=item.sid%>
+                        </td>
+                        <td><a href="/detail/<%=item.sid%>">
+                                <%=item.sname%>
+                            </a></td>
+                        <td>
+                            <%=item.sage%>
+                        </td>
+                        <td>
+                            <%=item.sphone%>
+                        </td>
+                        <td>
+                            <%=item.sclass%>
+                        </td>
+                        <td> <a href="/del/<%=item.sid%>" class="btn btn-danger">删除</a> <a href="/update/<%=item.sid%>"
+                                class="btn btn-primary">修改</a> </td>
+                    </tr>
+                    <%});%>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let msg = document.getElementById("msg")
+        let quit = document.getElementById("quit")
+        let tname = sessionStorage.getItem("tname")
+        if (tname) {
+            msg.innerHTML = "欢迎" + tname + "老师"
+            quit.innerHTML = "<a href='/quit'>退出登录<a>"
+        } else {
+            msg.innerHTML = "<a href='/login'>登录</a>"
+        }
+        quit.onclick = function () {
+            sessionStorage.clear()
+        }
+    </script>
+</body>
+
+</html>

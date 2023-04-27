@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    <!-- <h1>
+        hello world
+    </h1>
+    <ul>
+        <li>111</li>
+        <li class="red size30">222</li>
+        <li>333</li>
+    </ul>
+    <div class="btn">按钮</div>
+    <p class="blue">Nodejs中自带的fs和path模块可以用于读写文件和路径操作。通过读取和解析文件实现与的交互，这种方式通常用于处理小型项目和简单的数据存储。</p>
+    <div class="btn">按钮</div> -->
+
+    <div class="container">
+        <table class="table border table-bordered table-danger table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>sid</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>手机号</th>
+                    <th>班级</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%arr.forEach(item=> {%> <tr>
+                        <td>
+                            <%=item.sid%>
+                        </td>
+                        <td><a href="/detail/<%=item.sid%>">
+                                <%=item.sname%>
+                            </a></td>
+                        <td>
+                            <%=item.sage%>
+                        </td>
+                        <td>
+                            <%=item.sphone%>
+                        </td>
+                        <td>
+                            <%=item.sclass%>
+                        </td>
+                        <td> <a href="/del/<%=item.sid%>" class="btn btn-danger">删除</a> <a href="/update/<%=item.sid%>"
+                                class="btn btn-primary">修改</a> </td>
+                    </tr>
+                    <%});%>
+            </tbody>
+        </table>
+    <div class="container border border-danger">
+        <h1>内外边距</h1>
+        <div class="border py-sm-5 py-md-3 py-lg-1">李清照故居</div>
+        <h1>辅助类</h1>
+        <div class="border border-top-0 border-danger">碌的工作和舒适生活的结合。孟州市是河南省的一个县级市，拥有丰富的历史和文化遗产，包括十三朝古都洛阳的遗址和康熙故居等。除此之外，孟州市还有其它吸引人的地方，如山水园林、风景名胜、商业区等。同时，孟州市的产业也分发达，主要包括制造业、农业和服务业等，让人们可以享受到全面发展和丰富多彩的生活。因此，孟州市是一个很好的选择来实现工作与生活的平衡。</div>
+        <h1>列表</h1>
+        <table class="table table-bordered table-danger table-hover">
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>类型</th>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>肖生克的救赎</td>
+                <td>犯罪</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>当幸福来敲门</td>
+                <td>励志</td>
+            </tr>
+        </table>
+        <ul class="list-unstyled list-group">
+            <li class="list-group-item list-group-item-danger">111</li>
+            <li class="list-group-itme list-group-item-success">222</li>
+            <li class="list-group-item list-group-item-warning">333</li>
+        </ul>
+        <h1>文本相关</h1>
+        <div class="font-weight-bold h2 text-capitalize text-danger text-center">洛阳是中华文明的发源地之一，有着悠久的历史和化底蕴。同时，洛阳也是一个经济发达的城市，享有"中原工业重镇"的美誉。它不仅有优美的自然风光，还有许多著名的人文景观，如龙门石窟、洛阳白马寺、洛阳国家森林公园等等。此外，洛阳还是一个教育城市，有着高水平的大学和科研机构。</div>
+        <h1>图片相关</h1>
+        <img src="./img/4LnEGNQQgVzea--43hLAK9-irUkVh3VyNhH-V2xVwSY_MnZAEqecXRqd4qZ6IC5T0x3Q9Xo22JPutQ8DWfmL8Ujb.jpg" alt="" class="rounded">
+        <img src="./img/4LnEGNQQgVzea--43hLAK9-irUkVh3VyNhH-V2xVwSY_MnZAEqecXRqd4qZ6IC5T0x3Q9Xo22JPutQ8DWfmL8Ujb.jpg" alt="" class="rounded-circle"> 
+        <img src="./img/4LnEGNQQgVzea--43hLAK9-irUkVh3VyNhH-V2xVwSY_MnZAEqecXRqd4qZ6IC5T0x3Q9Xo22JPutQ8DWfmL8Ujb.jpg" alt="" class="img-thumbnail">
+        <!-- sm  小号  md 中号 l 大号 lg 超大号 -->
+        <h1>按钮</h1>
+        <div class="btn btn-outline-danger bg-warning">黄色</div>
+        <div class="btn btn-success">绿色</div>
+        <div class="btn btn-info">青色</div>
+        <div class="btn btn-light">浅色</div>
+        <div class="btn btn-dark">深色</div>
+        <div class="btn btn-danger">红色</div>
+        <div class="btn btn-primary btn-outline-dark">蓝色</div>
+        <div class="btn btn-secondary">灰色</div>
+        <h1></h1>
+        <br>
+        <br>
+        <div class="btn btn-outline-danger">按钮</div>
+        <div class="btn btn-outline-danger btn-sm">按钮</div>
+        <div class="btn btn-war btn-block">按钮</div>
+    </div>
+
+    
+</body>
+</html>

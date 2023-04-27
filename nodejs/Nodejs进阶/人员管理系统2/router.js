@@ -3,7 +3,7 @@ let view = require('./view');
 
 
 let router=(req,res)=>{
-     let url="http://localhost:8088"+req.url;
+     let url="http://localhost:8080"+req.url;
      let myurl = new URL(url);
      let s=myurl.searchParams;
      // 查询所有信息，并返回列表页面功能函数
@@ -36,7 +36,6 @@ let router=(req,res)=>{
        if(result.length>0){
         // 请求最新列表
        showlist()
-       
        // 登陆成功 显示学生列表
        }else{
         // 登陆失败显示登陆页面，提示账号或者密码错误
@@ -48,9 +47,28 @@ let router=(req,res)=>{
     }
 
     if(req.path=="/del"){
-
+      let sql = "delete from student where sid=?";
+      let data = [sid]
         // xxxx
         // 查询最新列表
+    }
+    if(req.path == "/add"){
+      let html = view.add();
+      res.write(html);
+      res.end()
+    }
+    if(req.path =="/toadd"){
+      let sname =s.get('sname');
+      let sage = s.get('sage')
+      let sphone = s.get('sphone');
+      let sclass=s.get('sclass');
+      let sql = "insert into student(sname,sage,sphone,sclass) value(?,?,?,?)"
+      let data = [sname,sage,sphone,sclass];
+      conn.query(sql,data,(err,result)=>{
+        if(result.affectedRows>0){
+          showlist();
+        }
+      })
     }
 
 

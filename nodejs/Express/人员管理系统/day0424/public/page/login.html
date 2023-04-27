@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <div class="login-container text-center">
+        <div class="login-image">
+            <img src="../pic/4LnEGNQQgVzea--43hLAK9-irUkVh3VyNhH-V2xVwSY_MnZAEqecXRqd4qZ6IC5T0x3Q9Xo22JPutQ8DWfmL8Ujb.jpg"
+                alt="" class="w-50 h-50 left ">
+        </div>
+        <form action="/tologin" method="post" class="d-flex justify-content-between ">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-md-4 offset-md-4">
+                        <form>
+                            <h2 class="text-center mb-4">登录页面</h2>
+                            <div class="mb-3">
+                                <label for="username" class="form-label" name="tname">登录账号</label>
+                                <input type="text" class="form-control" id="tname1" name="tname" placeholder="Enter username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">登录密码</label>
+                                <input type="password" class="form-control" name="tpwd" placeholder="Enter password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block submit" id="submit1">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form action="/toregin" method="post" class="d-flex justify-content-between">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-md-4 offset-md-4">
+                        <form>
+                            <h2 class="text-center mb-4">注册页面</h2>
+                            <div class="mb-3">
+                                <label for="username" class="form-label" id="tname2" name="tname" >登录账号</label>
+                                <input type="text" class="form-control" id="tname2" name="tname" placeholder="Enter username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">登录密码</label>
+                                <input type="password" class="form-control" name="tpwd" placeholder="Enter password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block submit" id="submit2">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script>
+       let tname1 = document.getElementById("tname1")
+        let tname2 = document.getElementById("tname2")
+        let submit1 = document.getElementById("submit1")
+        let submit2 = document.getElementById("submit2")
+        submit1.onclick=function(){
+            sessionStorage.setItem("tname",tname1.value)
+        }
+        submit2.onclick=function(){
+            sessionStorage.setItem("tname",tname2.value)
+        }
+      </script>
+</body>
+
+</html>

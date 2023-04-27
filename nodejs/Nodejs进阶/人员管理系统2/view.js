@@ -118,9 +118,10 @@ let list=(arr)=>{
      }
     </style>
     `
+
     let HTML=`
     <h1>人员列表页面</h1>
-    <a id="add" href="">添加账号</a>
+    <a id="" href="/add">添加学生信息</a>
     <table>
         <tr>
             <th>id</th>
@@ -131,7 +132,7 @@ let list=(arr)=>{
             <th>操作</th>
         </tr>
      `
-     for(var i=0;i<arr.length;i++){
+    for(var i=0;i<arr.length;i++){
         HTML+=`
         <tr>
           <td>${arr[i].sid}</td>
@@ -142,10 +143,57 @@ let list=(arr)=>{
           <td> 删除 </td>
         </tr>
         `
-     }
-     HTML+=`  </table>`
+    }
+    HTML+=`  </table>`
 
      return style+HTML;
 }
 
-module.exports={login,list}
+let add=()=>{
+    let style= `
+    <style>
+    h1{
+        color: skyblue;
+        text-align: center;
+    }
+    form{
+        /* border:1px solid red; */
+        text-align: center;
+        font-size: 20px;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid #ccc;
+        margin-top: 20px;
+        width: 300px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    input:focus{
+        outline: none;
+    }
+    #submit{
+        background-color: skyblue;
+        color: white;
+        line-height: 40px;
+        border-radius: 4px;
+        margin-top: 30px;
+    }
+</style>
+    `
+    let HTML=`
+    <h1>添加学生信息</h1>
+    <form action="/toadd">
+      姓名：  <input type="text" name="sname"> <br>
+      年龄： <input type="text" name="sage"> <br>
+      手机号： <input type="text" name="sphone"> <br>
+      班级： <input type="text" name="sclass"> <br>
+       <input id="submit" type="submit" value="添加">
+    
+    </form>
+    `
+
+    return style+HTML;
+}
+
+module.exports={login,list,add}
