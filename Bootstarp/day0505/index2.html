@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>表单</h1>
+        <form action="" class="form-group"> 
+            <div class="row mt-5">
+                <input type="text" name="" id="" class="form-control">
+            </div>
+            <div class="row mt-5">
+                <input type="text" name="" id="" class="form-control">
+            </div>
+            <div>
+                <input type="submit" name="" id="">
+            </div>
+        </form>
+        <h1>模态框</h1>
+        <button data-target="#m1" data-toggle="modal" class="btn btn-danger">打开</button>
+        <div id="m1" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>请输入姓名，测一测你的另一半是谁？</h3>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="" id="" class="form-control"> 
+                </div>
+                <div class="modal-footer">
+                    <a href="" data-dismiss="modal" class="btn btn-danger">提交</a>
+                </div>
+            </div>
+        </div>
+        <h1>手风琴</h1>
+        <div class="card">
+            <div data-target="#c1" data-toggle="collapse" class="card">河南洛阳</div>
+            <div id="c1" class="collapse" data-parent="#p1">
+                <div class="card-body"> 洛阳是中华文明的发源地之一，有着悠久的历史和化底蕴。同时，洛阳也是一个经济发达的城市，享有"中原工业重镇"的美誉。它不仅有优美的自然风光，还有许多著名的人文景观，如龙门石窟、洛阳白马寺、洛阳国家森林公园等等。此外，洛阳还是一个教育城市，有着高水平的大学和科研机构。</div>
+            </div>
+        </div>
+        <div class="card">
+            <div data-target="#c2" data-toggle="collapse" class="card">河南省郑州市</div>
+            <div id="c2" class="collapse" data-parent="#p1">
+                <div class="card-body">郑州市有悠久的历史文化，有大量的历史遗迹和文物。洛阳白马寺、登封少林寺、新郑舜帝陵等文化名胜古迹吸引了许多游客前来参观。另外，郑州市还是典型的工业城市，有许多世界著名的企业和品牌总部设立在这里。此外，郑州市机场、火车站等交通设施齐要的交通枢纽城市。
+
+                    总之，郑州市是一个具有悠久历史、繁荣发展、文化底蕴深厚、交通便捷的城市，既有浓郁的历史文化底蕴，又面向现代，具有很高的生活质量。</div>
+            </div>
+        </div>
+        <div class="card">
+            <div data-target="#c3" data-toggle="collapse" class="card">河南省焦作市</div>
+            <div id="c3" class="collapse" data-parent="#p1">
+                <div class="card-body">焦作市占地面积7923平方公里，396万人。该市的经济以工业为主，主要产出有钢铁、煤炭、化工、建材、机械等重点行业产品。此外，该市还拥有富集铁、铜、锰、铝等矿产资源。
+
+                    焦作市具有深厚的历史文化积淀，是中国古代文明的发祥地之一。该市历史上曾是商、周、秦、汉、唐等多个朝代的政治、经济和文化中心。著名的世界文化遗产——云冈石窟就位于该市。
+                    
+                    此外，焦作市还拥有独特的自然景观。以云台山为代表的山水旅游景点，吸引了大量游客前来观光和休闲。此外，环渠河大峡谷、云台山森林公园等景区也是其特色景点之一。
+                    
+                    总之，焦作市拥有丰富的历史文化和自然资源，是一个发展迅速、多样化、具有特</div>
+            </div>
+        </div>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a data-toggle="pill" href="#tab6" class="nav-link active">宝宝</a></li>
+            <li class="nav-item"><a data-toggle="pill" href="#tab7" class="nav-link">宝宝2</a></li>
+            <li class="nav-item"><a data-toggle="pill" href="#tab8" class="nav-link">宝宝3</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>河南洛阳</h1>
+                    </div>
+                    <div class="card-body">
+                        洛阳是中华文明的发源地之一，有着悠久的历史和化底蕴。同时，洛阳也是一个经济发达的城市，享有"中原工业重镇"的美誉。它不仅有优美的自然风光，还有许多著名的人文景观，如龙门石窟、洛阳白马寺、洛阳国家森林公园等等。此外，洛阳还是一个教育城市，有着高水平的大学和科研机构。
+                    </div>
+                    <div class="card-footer">城市</div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab7">
+                <div class="card">
+                    <div class="card-header"><h1>河南省郑州市</h1></div>
+                    <div class="card-body">郑州市有悠久的历史文化，有大量的历史遗迹和文物。洛阳白马寺、登封少林寺、新郑舜帝陵等文化名胜古迹吸引了许多游客前来参观。另外，郑州市还是典型的工业城市，有许多世界著名的企业和品牌总部设立在这里。此外，郑州市机场、火车站等交通设施齐要的交通枢纽城市。
+
+                        总之，郑州市是一个具有悠久历史、繁荣发展、文化底蕴深厚、交通便捷的城市，既有浓郁的历史文化底蕴，又面向现代，具有很高的生活质量。</div>
+                    <div class="card-footer">郑州</div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab8">
+                <div class="card">
+                    <div class="card-header"><h1>河南省焦作市</h1></div>
+                    <div class="card-body">焦作市占地面积7923平方公里，396万人。该市的经济以工业为主，主要产出有钢铁、煤炭、化工、建材、机械等重点行业产品。此外，该市还拥有富集铁、铜、锰、铝等矿产资源。
+
+                        焦作市具有深厚的历史文化积淀，是中国古代文明的发祥地之一。该市历史上曾是商、周、秦、汉、唐等多个朝代的政治、经济和文化中心。著名的世界文化遗产——云冈石窟就位于该市。
+                        
+                        此外，焦作市还拥有独特的自然景观。以云台山为代表的山水旅游景点，吸引了大量游客前来观光和休闲。此外，环渠河大峡谷、云台山森林公园等景区也是其特色景点之一。
+                        
+                        总之，焦作市拥有丰富的历史文化和自然资源，是一个发展迅速、多样化、具有特</div>
+                    <div class="card-footer">焦作市</div>
+                </div>
+            </div>
+        </div>
+        <h1>小卡片</h1>
+        <div class="card">
+            <div class="card-header">xxx标题</div>
+            <div class="card-body">卡片内容</div>
+            <div class="card-footer">卡片页脚</div>
+        </div>
+
+        <h1>折叠</h1>
+        <div id="d1" class="collapse">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit .Quaer
+        </div>
+        <h1>导航栏</h1>
+        <div class="navbar navbar-expand-md">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="">导航</a></li>
+                <li class="nav-item"><a class="nav-link" href="">导航</a></li>
+                <li class="nav-item"><a class="nav-link" href="">导航</a></li>
+            </ul>
+        </div>
+        <h1>胶囊导航</h1>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a data-toggle="pill" href="#tab1" class="nav-link active">包包</a></li>
+            <li class="nav-item"><a data-toggle="pill" href="#tab2" class="nav-link">化妆品</a></li>
+            <li class="nav-item"><a data-toggle="pill" href="#tab3" class="nav-link">鞋</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">爱马仕 LV</div>
+            <div class="tab-pane" id="tab2">dior 大宝 ysl 纪梵希 mac</div>
+            <div class="tab-pane" id="tab3">耐克 阿迪 老北京 百丽 tata</div>
+        </div>
+        <h1>选项卡</h1>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a data-toggle="tab" href="#tab1" class="nav-link active">包包</a></li>
+            <li class="nav-item"><a data-toggle="tab" href="#tab2" class="nav-link">化妆品</a></li>
+            <li class="nav-item"><a data-toggle="tab" href="#tab3" class="nav-link">鞋</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">爱马仕 LV</div>
+            <div class="tab-pane" id="tab2">dior 大宝 ysl 纪梵希 mac</div>
+            <div class="tab-pane" id="tab3">耐克 阿迪 老北京 百丽 tata</div>
+        </div>
+    </div>
+</body>
+
+</html>

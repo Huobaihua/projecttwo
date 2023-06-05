@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    width: 60px;
+    height: 30px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 4px;
+}
+ul li{
+    list-style: none;
+
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.size30{
+    font-size: 30px;
+}

@@ -10,14 +10,66 @@
         /* 媒介查询 */
         /* 完成响应式布局 */
         /* 根据屏幕尺寸大小显示不一样的样式 */
-        div{
-            width: 500px;
-            height: 300px;
-            background-color: red;
+        /* <576    超小屏幕 */
+        /* <768    中屏 */
+        /* <992    大屏 */
+        /* <1200   超大屏 */
+        /* 600 */
+        /* @media(min-width:576px){
+            div{
+                width: 500px;
+                background-color: red;
+            }
         }
+        @media(min-width:768px){
+            div{
+                width: 300px;
+                background-color: pink;
+            }
+        }
+        @media(min-width:992px){
+            div{
+                width: 100px;
+                background-color: blue;
+            }
+        } */
+        @media(max-width:1200px){
+            h1{
+                color: brown;
+                font-size: 30px;
+            }
+        }
+        @media(max-width:992px){
+            h1{
+                color: pink;
+                font-size: 22px;
+            }
+        }
+        @media(max-width:768px){
+            h1{
+                color: blue;
+                font-size: 18px;
+            }
+        }
+        @media(max-width:576px){
+            h1{
+                color: aquamarine;
+                font-size: 14px;
+            }
+        }
+        /* if(屏幕>992){
+            //样式1
+        } if(屏幕>768){
+            //样式二
+        }if(屏幕>576){
+            //样式3
+        } */
     </style>
 </head>
 <body>
-    <div class=""></div>
+    <!-- <div>洛阳是中华文明的发源地之一，有着悠久的历史和化底蕴。同时，洛阳也是一个经济发达的城市，享有"中原工业重镇"的美誉。它不仅有优美的自然风光，还有许多著名的人文景观，如龙门石窟、洛阳白马寺、洛阳国家森林公园等等。此外，洛阳还是一个教育城市，有着高水平的大学和科研机构。</div> -->
+
+
+    <h1>HelloWorld</h1>
 </body>
 </html>
